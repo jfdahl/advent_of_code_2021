@@ -63,7 +63,6 @@ function part2( input ){
         bits = getPositionalBits( o2, position );
         keeper = getCommonBit( bits );
         o2 = o2.filter( function( item ){ return item[position].match( keeper ); });
-        table( [bits, keeper, o2] );
         position++;
     }
     o2 = parseInt( o2, 2 );
@@ -73,7 +72,6 @@ function part2( input ){
         bits = getPositionalBits( co2, position );
         keeper = getCommonBit( bits ) == 1 ? 0 : 1;
         co2 = co2.filter( function( item ){ return item[position].match( keeper ); });
-        table( [bits, keeper, co2] );
         position++;
     }
     co2 = parseInt( co2, 2 );
